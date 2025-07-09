@@ -38,7 +38,7 @@ st.markdown(
 func_str = st.text_input("Escribe la función f(x):", value="x**2")
 a = st.number_input("Límite inferior (a):", value=0.0)
 b = st.number_input("Límite superior (b):", value=2.0)
-n = st.slider("Número de subintervalos (n):", min_value=2, max_value=100, step=1, value=10)
+n = st.slider("Número de subintervalos (n):", min_value=1, max_value=100, step=1, value=10)
 
 method = st.selectbox("Selecciona el método:", ["Riemann Izquierda", "Riemann Derecha", "Punto Medio", "Trapecio", "Simpson"])
 
@@ -128,13 +128,14 @@ try:
     # Valor exacto con scipy
     exact, _ = quad(f, a, b)
     error = abs(approx - exact)
+    error_porcentual = (error/ abs(exact)) * 100
 
     # Mostrar resultados
     st.subheader("📈 Resultados")
     st.write(f"**Valor aproximado:** {approx:.6f}")
     st.write(f"**Valor exacto:** {exact:.6f}")
     st.write(f"**Error absoluto:** {error:.6f}")
-    st.write(f"**Error porcentual:** {error*100:.6f} %")
+    st.write(f"**Error porcentual:** {error_porcentual:.6f} %")
 
 
     # Gráfica
