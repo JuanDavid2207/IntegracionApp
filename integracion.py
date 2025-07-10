@@ -23,7 +23,7 @@ st.set_page_config(page_title="Métodos de Integración Numérica", layout="cent
 
 st.markdown("""
     <h1 style='text-align: center;'> ∫ Métodos de Integración Numérica ∫ </h1>
-    <h3 style='text-align: center; color: gray;'>Instituto Tecnológico Nacional de México</h3>
+    <h3 style='text-align: center; color: gray;'>Tecnológico Nacional de México</h3>
 """, unsafe_allow_html=True)
 
 st.markdown(
