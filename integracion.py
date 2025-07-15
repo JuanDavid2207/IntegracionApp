@@ -11,11 +11,11 @@ def get_base64_image(image_path):
         data = f.read()
     return base64.b64encode(data).decode()
 
-img_base64 = get_base64_image("logo_tecnm.png")
+img_base64 = get_base64_image("logos.png")
 
 st.markdown(f"""
     <div style='text-align: center; margin-top: 10px; margin-bottom: -20px;'>
-        <img src="data:image/png;base64,{img_base64}" width="250">
+        <img src="data:image/png;base64,{img_base64}" width="500">
     </div>
 """, unsafe_allow_html=True)
 
@@ -28,7 +28,7 @@ st.markdown("""
 
 st.markdown(
     "<p style='text-align: center; color: gray; font-size: 12px; margin-top: 20px;'>"
-    "Desarrollado en el Laboratorio de Simulación Matematica del Instituto Tecnológico de Morelia por el Ing. Juan David López Regalado"
+    "Desarrollado en el Laboratorio de Simulación y Modelado Matematico del Instituto Tecnológico de Morelia por el Ing. Juan David López Regalado"
     "</p>",
     unsafe_allow_html=True
 )
